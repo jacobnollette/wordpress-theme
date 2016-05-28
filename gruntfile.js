@@ -17,12 +17,25 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: ['wp-content/themes/cn1/js/src/*.js'],
-				tasks: ['uglify']
+				tasks: ['uglify'],
+				options: {
+					livereload: true
+				}
 			},
 			css: { 
 				files: ['**/*.scss'],
-				tasks: ['compass']
+				tasks: ['compass'],
+				options: {
+					livereload: true
+				}
+			},
+			php: {
+				files: ['**/*.php'],
+				options: {
+					livereload: true
+				}
 			}
+
 		
 		}
 	});

@@ -54,6 +54,24 @@
 //
 
 
+/*!
+	Animate rotate function
+	Used for logo animation
+*/
+$.fn.animateRotate = function(startAngle, endAngle, duration, easing, complete){
+    return this.each(function(){
+        var elem = $(this);
+
+        $({deg: startAngle}).animate({deg: endAngle}, {
+            duration: duration,
+            easing: easing,
+            step: function(now){ elem.css({ '-moz-transform':'rotateY('+now+'deg)', '-webkit-transform':'rotateY('+now+'deg)', '-o-transform':'rotateY('+now+'deg)', '-ms-transform':'rotateY('+now+'deg)', 'transform':'rotateY('+now+'deg)' }); },
+            complete: complete || $.noop
+        });
+    });
+};
+
+
 
 ////////////////////
 //  MAIN LIBRARY  //

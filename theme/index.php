@@ -26,6 +26,9 @@
 		endif;
 		?>
 
+    this is a test
+
+
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
